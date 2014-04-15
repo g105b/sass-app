@@ -12,6 +12,9 @@ body, html {
 	font-family: sans-serif;
 	font-size: 1em;
 }
+ul, li {
+	list-style-type: none;
+}
 
 body {
 	> header {
