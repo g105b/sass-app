@@ -18,6 +18,8 @@ code {
 
 body {
 	background: #fff;
+	padding-top: $size_header;
+	padding-bottom: $size_footer;
 
 	> main {
 		background: #f7f7f7;
@@ -31,6 +33,10 @@ body {
 
 		h1, h2, h3, h4, h5, h6 {
 			padding: 0.5rem 1rem;
+		}
+
+		img {
+			max-width: 100%;
 		}
 	}
 }

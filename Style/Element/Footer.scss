@@ -10,6 +10,7 @@ body {
 		> menu {
 			background: $col_footer;
 			border-top: 1px solid $col_border;
+			overflow: hidden;
 
 			// Footer nav menu (tab bar)
 			&:not([type="toolbar"]) {
