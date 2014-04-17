@@ -6,8 +6,12 @@ public function go($api, $dom, $template, $tool) {
 			$main->getAttribute("data-title");
 	}
 
-	if(PATH === "Index") {
+	if(PATH === "MainMenu") {
 		$dom["body > header > nav"]->remove();
+	}
+
+	if(PATH === "Index") {
+		$dom["body > header"]->remove();
 	}
 }	
 }#

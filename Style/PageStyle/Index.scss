@@ -1,3 +1,11 @@
 body#index {
-	
+	background: #888;
+	text-align: center;
+
+	iframe {
+		width: 320px;
+		height: 568px;
+		margin: 0 auto;
+		margin-top: 5%;
+	}	
 }
