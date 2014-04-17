@@ -14,11 +14,13 @@ body {
 
 		> nav {
 			position: absolute;
+			z-index: 1001;
 			top: 0;
 			left: 0;
 			line-height: $size_header;
 
 			a {
+				padding: 1rem 0;
 				padding-left: 0.5rem;
 				text-decoration: none;
 				color: $col_button;
