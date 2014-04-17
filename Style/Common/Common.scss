@@ -26,10 +26,19 @@ code {
 
 body {
 	background: #f7f7f7;
-	padding-top: $size_header;
-	padding-bottom: $size_footer;
+	overflow: hidden;
 
 	> main {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding-top: $size_header;
+		padding-bottom: $size_footer;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
 
 		p {
 			padding: 1rem;
