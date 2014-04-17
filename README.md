@@ -49,3 +49,20 @@ Footer is a global bar fixed to the bottom of the screen, outside the scrollable
 * Filler - A full-page container that can be set to optionally be raised in front of the footer or header.
 * Sheet - A container that takes up the majority of the screen, sliding up from the bottom. Works as a modal container, but can be ignored by tapping outside of the sheet.
 * Modal - A container that presents the user with a modal dialog box. Options: spinner (with no buttons or cancel button) alert (with OK button), choice (two or three options), prompt (text input).
+
+
+Usage
+-----
+
+To begin using Sass-App, you need to include two files in your project:
+
+1. Sass-App.scss
+2. Sass-App.js
+
+There files and the files they import/require are located within `/Style` and `/Script` respecfully. All source files are to be compiled into the public web root -- the `/www` directory for this project.
+
+
+PHP.Gt
+------
+
+This project is built using [PHP.Gt](http://php.gt), which supports compilation of JavaScript and Sass as standard. Check out the PageView directory of this project to see what HTML is required to make this all work, bound together with the help of PHP.Gt.
