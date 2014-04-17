@@ -66,3 +66,7 @@ PHP.Gt
 ------
 
 This project is built using [PHP.Gt](http://php.gt), which supports compilation of JavaScript and Sass as standard. Check out the PageView directory of this project to see what HTML is required to make this all work, bound together with the help of PHP.Gt.
+
+The main Sass/js part of this project does not require PHP.Gt in any way, and can plug in to virtually any development envoronment.
+
+For support, [tag your question with 'sass-app' on Stack Overflow](http://stackoverflow.com/questions/tagged/sass-app), and a developer will get in touch as quickly as possible.
