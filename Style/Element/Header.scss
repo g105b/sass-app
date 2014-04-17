@@ -1,0 +1,19 @@
+body {
+	> header {
+		position: relative;
+		z-index: 1000;
+		height: $size_header;
+		border-bottom: 1px solid $col_border;
+		background: $col_header;
+
+		> h1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			line-height: $size_header;
+			text-align: center;
+			font-weight: normal;
+		}
+	}
+}

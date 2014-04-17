@@ -1,37 +1,6 @@
-$col_header: rgba(#aaa, 0.1);
-$col_border: rgba(#aaa, 0.5);
+@import "Common/Variables.scss";
+@import "Common/Common.scss";
 
-$size_header: 42px;
+@import "Element/Header.scss";
 
-body, html {
-	min-height: 100%;
-}
-* { // A crude reset.
-	padding: 0;
-	margin: 0;
-	font-family: sans-serif;
-	font-size: 1em;
-}
-ul, li {
-	list-style-type: none;
-}
-
-body {
-	> header {
-		position: relative;
-		z-index: 1000;
-		height: $size_header;
-		border-bottom: 1px solid $col_border;
-		background: $col_header;
-
-		> h1 {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			line-height: $size_header;
-			text-align: center;
-			font-weight: normal;
-		}
-	}
-}
+@import "PageStyle/Index.scss";
