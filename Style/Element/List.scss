@@ -1,7 +1,19 @@
 ul {
+	background: #fff;
+
 	li {
+		margin: 0 1rem;
+		padding: 0.5rem 0;
+
+		box-sizing: border-box;
+		border-bottom: 1px solid $col_border;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+
 		a {
-			
+
 		}
 	}
 }
