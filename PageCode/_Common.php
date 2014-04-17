@@ -5,5 +5,9 @@ public function go($api, $dom, $template, $tool) {
 		$dom["body > header > h1"]->textContent = 
 			$main->getAttribute("data-title");
 	}
+
+	if(PATH === "Index") {
+		$dom["body > header > nav"]->remove();
+	}
 }	
 }#
