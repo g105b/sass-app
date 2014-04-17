@@ -1,0 +1,55 @@
+body {
+	> footer {
+		position: fixed;
+		z-index: 100;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: $size_footer;
+
+		> menu {
+			background: $col_footer;
+			border-top: 1px solid $col_border;
+
+			// Footer nav menu (tab bar)
+			&:not([type="toolbar"]) {
+				li {
+					float: left;
+					display: block;
+					overflow: hidden;
+					box-sizing: border-box;
+					width: 50%;
+
+					a {
+						display: block;
+						color: rgba(#000, 0.5);
+						text-decoration: none;
+						text-align: center;
+						font-size: 1.5em;
+						line-height: 0.5em;
+
+						i {
+							display: block;
+							padding-top: 0.25em;
+						}
+
+						span {
+							font-size: 0.4em;
+						}
+					}
+				}
+
+				&.size-3 li {
+					width: 33.33333%;
+				}
+				&.size-4 li {
+					width: 25%;
+				}
+			}
+
+			&.toolbar {
+
+			}
+		}
+	}
+}
