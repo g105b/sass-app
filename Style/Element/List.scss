@@ -3,7 +3,7 @@ ul {
 
 	li {
 		margin: 0 1rem;
-		padding: 1rem 0;
+		padding: 0;
 
 		box-sizing: border-box;
 		border-bottom: 1px solid $col_border;
@@ -16,6 +16,7 @@ ul {
 			display: block;
 			color: inherit;
 			text-decoration: none;
+			padding: 1rem 0;
 		}
 	}
 }
