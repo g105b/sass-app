@@ -1,0 +1,21 @@
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://FontAwesome.io - @FontAwesome
+ *  License: http://FontAwesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ *
+ * This file is created to allow scssphp to compile (requires specific imports).
+ */
+
+$fa-font-path: "/Style/Font/FontAwesome";
+
+@import "FontAwesome/_variables.scss";
+@import "FontAwesome/_mixins.scss";
+@import "FontAwesome/_path.scss";
+@import "FontAwesome/_core.scss";
+@import "FontAwesome/_larger.scss";
+@import "FontAwesome/_fixed-width.scss";
+@import "FontAwesome/_list.scss";
+@import "FontAwesome/_bordered-pulled.scss";
+@import "FontAwesome/_spinning.scss";
+@import "FontAwesome/_rotated-flipped.scss";
+@import "FontAwesome/_stacked.scss";
+@import "FontAwesome/_icons.scss";
