@@ -32,6 +32,11 @@ body {
 						font-size: 1.5em;
 						line-height: 0.5em;
 
+						&:active {
+							background: $col_button;
+							color: #fff;
+						}
+
 						i {
 							display: block;
 							padding-top: 0.25em;
