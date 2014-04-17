@@ -12,6 +12,19 @@ body {
 		border-bottom: 1px solid $col_border;
 		background: $col_header;
 
+		> nav {
+			position: absolute;
+			top: 0;
+			left: 0;
+			line-height: $size_header;
+
+			a {
+				padding-left: 0.5rem;
+				text-decoration: none;
+				color: $col_button;
+			}
+		}
+
 		> h1 {
 			position: absolute;
 			top: 0;
