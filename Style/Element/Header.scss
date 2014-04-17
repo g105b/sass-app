@@ -1,6 +1,12 @@
 body {
+	padding-top: $size_header;
+	
 	> header {
-		position: relative;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+
 		z-index: 1000;
 		height: $size_header;
 		border-bottom: 1px solid $col_border;
