@@ -30,6 +30,8 @@ body#index {
 		position: absolute;
 		left: -($width_phone / 2);
 		top: -($height_phone / 2);
+		-webkit-animation: fadeIn 2s 2s 1 both ease-in-out;
+		animation: fadeIn 2s 2s 1 both ease-in-out;
 
 		background-image: url("/Style/Img/Phone.svg");
 		background-repeat: no-repeat;
@@ -51,5 +53,13 @@ body#index {
 			border-radius: 2px;
 		}	
 		
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		top: 200%;
+		opacity: 0;
+		-webkit-transform: scale(2);
 	}
 }
