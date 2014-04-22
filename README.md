@@ -1,13 +1,13 @@
 SassApp
 =======
 
-UI elements for native-feeling mobile web apps, using simple Sass and very little pure JavaScript.
+UI components for native-feeling mobile web apps, using simple Sass and very little pure JavaScript.
 
 
-List of elements
+List of components
 ----------------
 
-All UI elements described by Apple in their [Human Interface Guidelines](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/Bars.html) are covered here.
+All UI components described by Apple in their [Human Interface Guidelines](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/Bars.html) are covered here.
 
 ### Header:
 
@@ -25,7 +25,7 @@ Footer is a global bar fixed to the bottom of the screen, outside the scrollable
 * Menu - A toolbar containing controls that perform actions related to objects in the screen or view. Button options include: left, right, textual.
 
 
-### Input elements:
+### Input components:
 
 * Search - A clearable text input. Options include: Icon (placed on left of element), prompt (placed above element), scope (see below).
 * Search scope - A simplified tab bar used in conjunction with a search element to help users define the scope of a search.
