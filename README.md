@@ -61,12 +61,26 @@ To begin using Sass-App, you need to include two files in your project:
 
 There files and the files they import/require are located within `/Style` and `/Script` respecfully. All source files are to be compiled into the public web root -- the `/www` directory for this project.
 
+Libraries used
+--------------
 
-PHP.Gt
-------
+### Pjax
+
+To ensure the app feels native on a real device, links are preloaded using [the Pjax library](http://github.com/g105b/pjax).
+
+Out of the box, including the pjax library does not pre-load anything, and does not leak any variables into global scope. The way you set links to preload is either add the `data-pjax=true` attribute to anchors, or to containers of anchors. 
+
+A query selector can be used in the attribute to pre-load only specific anchors i.e. `data-pjax="li > a.preload"`. Pre-loading can be disabled per-anchor with `data-pjax=false`.
+
+
+### PHP.Gt
 
 This project is built using [PHP.Gt](http://php.gt), which supports compilation of JavaScript and Sass as standard. Check out the PageView directory of this project to see what HTML is required to make this all work, bound together with the help of PHP.Gt.
 
-The main Sass/js part of this project does not require PHP.Gt in any way, and can plug in to virtually any development envoronment.
+PHP.Gt is not a dependency of Sass-App. It is used to increase prototyping speed by abstracting away the usual bottlenecks of building static websites -- the main Sass/js part of this project does not require PHP.Gt in any way, and can plug in to virtually any development envoronment.
+
+
+Support
+-------
 
 For support, [tag your question with 'sass-app' on Stack Overflow](http://stackoverflow.com/questions/tagged/sass-app), and a developer will get in touch as quickly as possible.
