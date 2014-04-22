@@ -39,6 +39,13 @@ body {
 		overflow-x: hidden;
 		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
+		&::-webkit-scrollbar {
+			width: 4px;
+			background: transparent;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: rgba(#000, 0.2);
+		}
 
 		p {
 			padding: 1rem;
