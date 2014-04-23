@@ -8,6 +8,8 @@ var
 	pjaxAnchorArray = [],
 	len_anchor,
 	i_anchor,
+
+	pjax = {},
 $;
 
 // Add anchors within containers to the array:
@@ -35,7 +37,7 @@ Array.prototype.forEach.call(pjaxAnchorList, function(anchor) {
 
 // Load cached page for each anchor's href:
 len_anchor = pjaxAnchorArray.length;
-for(i_anchor = 0; i_anchor < len_anchor; i++) {
+for(i_anchor = 0; i_anchor < len_anchor; i_anchor++) {
 	cache(pjaxAnchorArray[i_anchor]);
 }
 
@@ -45,11 +47,45 @@ function cache(anchor) {
 	$;
 
 	if(localStorage[anchor.href]) {
-		// Check validity.
+		if(pjax[anchor.href]) {
+			return;
+		}
+
+		cacheLoad(anchor, localStorage[anchor.href]);
+		return;
 	}
+
+	xhr.open("get", anchor.href, true);
+	xhr.addEventListener("load", function() {
+		cacheLoad(anchor, this.responseText);
+	});
+	xhr.send();
+};
+
+function cacheLoad(anchor, html) {
+	var
+		doc = document.implementation.createHTMLDocument(''),
+	$;
+
+	doc.documentElement.innerHTML = html;
+	localStorage[anchor.href] = html;
+
+	pjax[anchor.href] = {
+		"title": doc.title,
+		"body": doc.body.innerHTML,
+	};
+	anchor.addEventListener("click", e_click);
 };
 
 function e_click(e) {
+	if(!pjax[this.href]) {
+		return true;
+	}
 
+	e.preventDefault();
+
+	document.title = pjax[this.href].title;
+	document.body.innerHTML = pjax[this.href].body;
 };
+
 });
