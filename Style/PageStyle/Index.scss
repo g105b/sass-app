@@ -4,62 +4,122 @@ body#index {
 		#5bc5ff 0%,
 		#53b3e6 100%
 	);
+	min-width: 960px;
+	overflow-x: auto;
+	overflow-y: hidden;
 
-	#center {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		overflow: visible;
+	> section {
+		margin: 32px;
+		padding: 32px;
+		width: 320px;
+		border: 1px solid #fff;
+		border-radius: 32px;
+		color: #fff;
+		line-height: 1.5em;
+
+		> header {
+			h1 {
+				font-weight: normal;
+				font-size: 32px;
+			}
+			h2 {
+				font-weight: normal;
+				font-style: italic;
+				margin-top: 32px;
+			}
+		}
+
+		> p {
+			margin-top: 32px;
+		}
 	}
 
-	#phone {
-		$size_scalar: 0.41;
-
-		$width_phone: 966px;
-		$height_phone: 2000px;
-		$top_iframe: $height_phone / 6.5;
-		$width_iframe: $width_phone - 186px;
-		$height_iframe: $height_phone - $top_iframe - 304px;
-
-		$width_phone: $width_phone * $size_scalar;
-		$height_phone: $height_phone * $size_scalar;
-		$top_iframe: $top_iframe * $size_scalar;
-		$width_iframe: $width_iframe * $size_scalar;
-		$height_iframe: $height_iframe * $size_scalar;
-
+	> main {
 		position: absolute;
-		left: -($width_phone / 2);
-		top: -($height_phone / 2);
-		-webkit-animation: fadeIn 2s 2s 1 both ease-in-out;
-		animation: fadeIn 2s 2s 1 both ease-in-out;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0;
+		height: 100%;
+		overflow: visible;
 
-		background-image: url("/Style/Img/Phone.svg");
-		background-repeat: no-repeat;
-		background-position: center top;
-		background-size: 100%;
+		#center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			overflow: visible;
 
-		width: $width_phone;
-		height: $height_phone;
+			#phone {
+				$size_scalar: 0.41;
 
-		margin: 0 auto;
-		text-align: center;
+				$width_phone: 966px;
+				$height_phone: 2000px;
+				$top_iframe: $height_phone / 6.5;
+				$width_iframe: $width_phone - 186px;
+				$height_iframe: $height_phone - $top_iframe - 304px;
 
-		iframe {
-			width: $width_iframe;
-			height: $height_iframe;
-			margin-top: $top_iframe;
-			background: #fff;
-			border: none;
-			border-radius: 2px;
-		}	
-		
+				$width_phone: $width_phone * $size_scalar;
+				$height_phone: $height_phone * $size_scalar;
+				$top_iframe: $top_iframe * $size_scalar;
+				$width_iframe: $width_iframe * $size_scalar;
+				$height_iframe: $height_iframe * $size_scalar;
+
+				position: absolute;
+				left: -($width_phone / 2);
+				top: -($height_phone / 2);
+				-webkit-animation: fadeIn 2s 2s 1 both ease-in-out;
+				animation: fadeIn 2s 2s 1 both ease-in-out;
+
+				-webkit-transform: rotateZ(0);
+				transform: rotateZ(0);
+
+				background-image: url("/Style/Img/Phone.svg");
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: 100%;
+
+				width: $width_phone;
+				height: $height_phone;
+
+				margin: 0 auto;
+				text-align: center;
+
+				iframe {
+					width: $width_iframe;
+					height: $height_iframe;
+					margin-top: $top_iframe;
+					background: #fff;
+					border: none;
+					border-radius: 3px;
+				}	
+				
+			}
+		}
+
+		@media (max-width: 1300px) {
+			left: 448px;
+
+			#center {
+				left: 0;
+
+				#phone {
+					left: 0;
+				}
+			}
+		}
 	}
 }
 
 @-webkit-keyframes fadeIn {
 	from {
-		top: 200%;
 		opacity: 0;
-		-webkit-transform: scale(2);
+		-webkit-transform: scale(0.9) rotateZ(0);
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.9) rotateZ(0);
 	}
 }

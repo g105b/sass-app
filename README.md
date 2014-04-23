@@ -1,7 +1,7 @@
 SassApp
 =======
 
-UI components for native-feeling mobile web apps, using simple Sass and very little pure JavaScript.
+UI components for native-feeling mobile web apps, using simple modular Sass and very little pure JavaScript.
 
 
 List of components
