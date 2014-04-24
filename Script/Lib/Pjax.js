@@ -46,16 +46,16 @@ function cache(anchor) {
 		xhr = new XMLHttpRequest(),
 	$;
 
-	if(localStorage[anchor.href]) {
-		if(pjax[anchor.href]) {
+	if(localStorage[anchor.pathname]) {
+		if(pjax[anchor.pathname]) {
 			return;
 		}
 
-		cacheLoad(anchor, localStorage[anchor.href]);
+		cacheLoad(anchor, localStorage[anchor.pathname]);
 		return;
 	}
 
-	xhr.open("get", anchor.href, true);
+	xhr.open("get", anchor.pathname, true);
 	xhr.addEventListener("load", function() {
 		cacheLoad(anchor, this.responseText);
 	});
@@ -68,9 +68,9 @@ function cacheLoad(anchor, html) {
 	$;
 
 	doc.documentElement.innerHTML = html;
-	localStorage[anchor.href] = html;
+	localStorage[anchor.pathname] = html;
 
-	pjax[anchor.href] = {
+	pjax[anchor.pathname] = {
 		"title": doc.title,
 		"body": doc.body.innerHTML,
 	};
@@ -78,14 +78,14 @@ function cacheLoad(anchor, html) {
 };
 
 function e_click(e) {
-	if(!pjax[this.href]) {
+	if(!pjax[this.pathname]) {
 		return true;
 	}
 
 	e.preventDefault();
 
-	document.title = pjax[this.href].title;
-	document.body.innerHTML = pjax[this.href].body;
+	document.title = pjax[this.pathname].title;
+	document.body.innerHTML = pjax[this.pathname].body;
 };
 
 });
