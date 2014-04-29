@@ -65,6 +65,7 @@ function cache(anchor) {
 function cacheLoad(anchor, html) {
 	var
 		doc = document.implementation.createHTMLDocument(''),
+		parent = anchor.parentElement,
 	$;
 
 	doc.documentElement.innerHTML = html;
@@ -74,6 +75,10 @@ function cacheLoad(anchor, html) {
 		"title": doc.title,
 		"body": doc.body.innerHTML,
 	};
+
+	while(parent) {
+		parent = parent.parentElement;
+	}
 	anchor.addEventListener("click", e_click);
 };
 
@@ -86,6 +91,7 @@ function e_click(e) {
 
 	document.title = pjax[this.pathname].title;
 	document.body.innerHTML = pjax[this.pathname].body;
+	document.dispatchEvent(new Event("DOMContentLoaded"));
 };
 
 });
