@@ -29,6 +29,14 @@ function(el) {
 	el.parentElement.insertBefore(container, el);
 	container.appendChild(el);
 	container.appendChild(placeholder);
+
+	el.addEventListener("change", function(e) {
+		if(!this.value) {
+			this.removeAttribute("value");
+			return;
+		}
+		this.setAttribute("value", this.value)
+	});
 });
 
 });

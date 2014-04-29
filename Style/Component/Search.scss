@@ -38,7 +38,7 @@
 			}
 		}
 
-		&:focus {
+		&:focus, &[value] {
 			~ .placeholder {
 				display: none;
 			}
