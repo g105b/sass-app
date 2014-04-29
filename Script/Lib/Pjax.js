@@ -1,3 +1,10 @@
+/**
+ * Pjax: The concept of using ajax (XMLHttpRequest) and pushState to produce
+ * instant-loading links for speeding up sites and apps, without breaking the
+ * browser's back button.
+ *
+ * http://github.com/g105b/pjax
+ */
 ;document.addEventListener("DOMContentLoaded", function() {
 var
 	// First find all elements with the data-pjax attribute.
