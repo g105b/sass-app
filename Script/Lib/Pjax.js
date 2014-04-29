@@ -65,7 +65,7 @@ function cache(anchor) {
 function cacheLoad(anchor, html) {
 	var
 		doc = document.implementation.createHTMLDocument(''),
-		parent = anchor.parentElement,
+		parent = anchor,
 	$;
 
 	doc.documentElement.innerHTML = html;
@@ -77,6 +77,14 @@ function cacheLoad(anchor, html) {
 	};
 
 	while(parent) {
+		if(parent.hasAttribute("data-pjax-event")) {
+			parent.getAttribute("data-pjax-event").split(" ").forEach(
+			function(eventName) {
+				console.log(eventName);
+				anchor.addEventListener(eventName, e_click);
+			});
+			break;
+		}
 		parent = parent.parentElement;
 	}
 	anchor.addEventListener("click", e_click);
