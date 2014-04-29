@@ -31,6 +31,17 @@ body#index {
 
 		> p {
 			margin-top: 32px;
+
+			a {
+				display: block;
+				color: #fff;
+				text-align: center;
+				text-decoration: none;
+
+				i {
+					font-size: 2em;
+				}
+			}
 		}
 	}
 
