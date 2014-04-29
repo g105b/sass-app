@@ -56,8 +56,27 @@ body {
 				}
 			}
 
-			&.toolbar {
+			&[type="toolbar"] {
+				li {
+					float: right;
+					opacity: 0.5;
 
+					&:first-of-type, &:active, &.selected {
+						opacity: 1;
+					}
+
+					button {
+						background: transparent;
+						border: none;
+						color: $col_button;
+						padding: 0.8em;
+						outline: none;
+
+						i {
+							font-size: 1.5em;
+						}
+					}
+				}
 			}
 		}
 	}
