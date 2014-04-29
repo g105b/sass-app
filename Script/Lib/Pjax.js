@@ -87,7 +87,6 @@ function cacheLoad(anchor, html) {
 		if(parent.hasAttribute("data-pjax-event")) {
 			parent.getAttribute("data-pjax-event").split(" ").forEach(
 			function(eventName) {
-				console.log(eventName);
 				anchor.addEventListener(eventName, e_click);
 			});
 			break;
