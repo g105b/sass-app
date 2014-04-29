@@ -19,6 +19,10 @@ input, textarea {
 }
 a, button {
 	cursor: pointer;
+
+	* {
+		cursor: pointer;
+	}
 }
 
 ul, li {
