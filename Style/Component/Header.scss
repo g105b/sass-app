@@ -17,11 +17,19 @@ body {
 			left: 0;
 			line-height: $size_header;
 
+			&:active {
+				top: 2px;
+			}
+
 			a {
 				padding: 1rem 0;
 				padding-left: 0.5rem;
 				text-decoration: none;
 				color: $col_button;
+
+				&:active {
+					color: #000;
+				}
 			}
 		}
 
