@@ -4,6 +4,10 @@
 	font-size: 0.8em;
 	padding: 0.5rem;
 
+	&:active {
+		background: darken($col_border, 0.5);
+	}
+
 	input[type=search] {
 		position: relative;
 		padding: 0.5rem;
@@ -35,10 +39,8 @@
 		}
 
 		&:focus {
-			z-index: 5;
-
 			~ .placeholder {
-				z-index: 1;
+				display: none;
 			}
 		}
 	}
