@@ -2,14 +2,18 @@ ul {
 	background: #fff;
 
 	li {
-		margin: 0 1rem;
-		padding: 0;
+		padding: 0 1rem;
+		margin: 0;
 
 		box-sizing: border-box;
 		border-bottom: 1px solid $col_border;
 
 		&:last-of-type {
 			border-bottom: none;
+		}
+		&:active {
+			background: $col_button;
+			color: #fff;
 		}
 
 		a {
