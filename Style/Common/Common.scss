@@ -16,8 +16,13 @@ body, html {
 input, textarea {
 	-webkit-user-select: text;
 	cursor: text;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	outline: none;
+	box-sizing: border-box;
+	width: 100%;
 }
-a, button {
+a, button, label {
 	cursor: pointer;
 
 	* {

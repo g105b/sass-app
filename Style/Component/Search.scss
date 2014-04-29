@@ -1,0 +1,45 @@
+.sass-app-search {
+	position: relative;
+	background: $col_border;
+	font-size: 0.8em;
+	padding: 0.5rem;
+
+	input[type=search] {
+		position: relative;
+		padding: 0.5rem;
+		
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-decoration,
+		&::-webkit-search-results-button,
+		&::-webkit-search-results-decoration {
+			-webkit-appearance: none;
+		}
+
+		~ .placeholder {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 0.5rem;
+			text-align: center;
+			font-weight: bold;
+			color: rgba(#000, 0.5);
+			line-height: 2.5em;
+
+			&::before {
+				font-family: "FontAwesome";
+				content: "\f002"; // fa-search
+				padding-right: 0.5rem;
+			}
+		}
+
+		&:focus {
+			z-index: 5;
+
+			~ .placeholder {
+				z-index: 1;
+			}
+		}
+	}
+}
