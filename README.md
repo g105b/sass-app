@@ -3,6 +3,8 @@ SassApp
 
 UI components for native-feeling mobile web apps, using simple modular Sass and very little pure JavaScript.
 
+![Sass App iphone emulation screenshot, a native app built in HTML5](https://raw.githubusercontent.com/g105b/sass-app/master/Screenshot.png "Sass App")
+
 
 List of components
 ----------------
