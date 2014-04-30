@@ -13,6 +13,7 @@ public function go($api, $dom, $template, $tool) {
 	if(PATH === "Index") {
 		$dom["body > header"]->remove();
 		$dom["body"]->removeAttribute("data-pjax");
+		$dom[".pageSlider"]->remove();
 	}
 }	
 }#
