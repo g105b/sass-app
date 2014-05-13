@@ -11,16 +11,17 @@ ul {
 		&:last-of-type {
 			border-bottom: none;
 		}
-		&:active {
-			background: $col_button;
-			color: #fff;
-		}
-
-		a {
+		
+		> a, > span {
 			display: block;
 			color: inherit;
 			text-decoration: none;
 			padding: 1rem 0;
+		}
+
+		> a:active {
+			background: $col_button;
+			color: #fff;
 		}
 	}
 }
