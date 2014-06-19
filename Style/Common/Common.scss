@@ -10,7 +10,6 @@ body, html {
 	// Prevent copy paste for all elements except text fields.
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-
 	cursor: default;
 }
 input, textarea {
@@ -75,23 +74,14 @@ body {
 		overflow-x: hidden;
 		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
-		&::-webkit-scrollbar {
-			width: 4px;
-			background: transparent;
-		}
-		&::-webkit-scrollbar-thumb {
-			background: rgba(#000, 0.2);
-		}
 
 		p {
 			padding: 1rem;
 		}
-		h1 {
-			font-size: 1.5em;
-		}
 
 		h1, h2, h3, h4, h5, h6 {
 			padding: 0.5rem 1rem;
+			font-size: 1rem;
 		}
 
 		img {
@@ -102,4 +92,12 @@ body {
 			color: $col_button;
 		}
 	}
+}
+
+&::-webkit-scrollbar {
+	width: 4px;
+	background: transparent;
+}
+&::-webkit-scrollbar-thumb {
+	background: rgba(#000, 0.2);
 }
